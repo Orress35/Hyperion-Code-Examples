@@ -1,4 +1,4 @@
 pcr start {
-    syscall:write(1, "Hello, World!\n", 14);
+    syscall:write(1, "Hello, World!\n", 14)
     syscall:exit(0)
 }

@@ -1,3 +1,0 @@
-pcr start {
-    syscall:exit(0)
-}

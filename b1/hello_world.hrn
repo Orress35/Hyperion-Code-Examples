@@ -1,4 +1,4 @@
-pcr start {
-    syscall:write(1, "Hello, World!\n", 14)
-    syscall:exit(0)
-}
+pcr start {                                 // _start procedure
+    syscall:write(1, "Hello, World!\n", 14) // print out hello world
+    syscall:exit(0)                         // exit with code 0
+}                                           // end of procedure body

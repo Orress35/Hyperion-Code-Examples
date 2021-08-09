@@ -1,6 +1,68 @@
+# basic syntax
 fn main {
   print("What's your name? ")
   string name = input()
   println("Hello, " + name + "!")
+  exit(0)
 }
 
+# arguments
+fn main(args) {
+  if (args.length < 2)
+    exit(1)
+  print("Hello, " + args[1] + "!")
+  exit(0)
+}
+
+# procedures
+pcr helloWorld {
+  println("hello world")
+}
+
+fn main {
+  helloWorld()
+  exit(0)
+}
+
+# automatic exit
+fn main {
+  println("hello world")
+}
+
+# jumping in bytes
+fn main {
+  println("hello world")
+  jump($-2)
+}
+
+# assembly functions
+afn helloWorld {
+  syscall(4, 1, "Hello, World!\n", 14)
+}
+
+afn customExit {
+  syscall(60, 0)
+}
+
+fn main {
+  call(helloWorld)
+  call(customExit)
+}
+
+# packages & imports
+
+// src/a.hrn
+package .
+
+import other.b
+
+fn main {
+  b.lol()
+}
+
+// src/other/b.hrn
+package other
+
+fn lol {
+
+}

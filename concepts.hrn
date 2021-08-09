@@ -1,4 +1,4 @@
-# basic syntax
+### basic syntax
 fn main {
   print("What's your name? ")
   string name = input()
@@ -6,7 +6,9 @@ fn main {
   exit(0)
 }
 
-# arguments
+
+
+### arguments
 fn main(args) {
   if (args.length < 2)
     exit(1)
@@ -14,7 +16,9 @@ fn main(args) {
   exit(0)
 }
 
-# procedures
+
+
+### procedures
 pcr helloWorld {
   println("hello world")
 }
@@ -24,18 +28,22 @@ fn main {
   exit(0)
 }
 
-# automatic exit
+
+
+### automatic exit
 fn main {
   println("hello world")
 }
 
-# jumping in bytes
+### jumping in bytes
 fn main {
   println("hello world")
   jump($-2)
 }
 
-# assembly functions
+
+
+### assembly functions
 afn helloWorld {
   syscall(4, 1, "Hello, World!\n", 14)
 }
@@ -49,7 +57,9 @@ fn main {
   call(customExit)
 }
 
-# packages & imports
+
+
+### packages & imports
 
 // src/a.hrn
 package .
@@ -65,4 +75,43 @@ package other
 
 fn lol {
 
+}
+
+
+
+### loops
+package .
+
+fn main {
+  // loop from 1 to 5
+  range (5) |x| {
+    println("hello from range loop (end): " + x)
+  }
+  
+  // loop from 1 to 5
+  range (1, 5) |x| {
+    println("hello from range loop (start, end): " + x)
+  }
+  
+  // loop from 0 to 10 with step 2
+  range (0, 10, 2) |x| {
+    println("hello from range loop (start, end, step): " + x)
+  }
+  
+  // loop from 0 to 4
+  for (int i = 0; i < 5; i++) {
+    println("hello from for loop: " + i)
+  }
+  
+  // loop from 0 to 100
+  int i = 0;
+  while (i <= 100) {
+    println("hello from while loop: " + i)
+    i++
+  }
+  
+  // loop infinitely
+  loop {
+    println("hello from basic loop")
+  }
 }

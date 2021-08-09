@@ -1,0 +1,6 @@
+fn main {
+  print("What's your name? ")
+  string name = input()
+  println("Hello, " + name + "!")
+}
+
